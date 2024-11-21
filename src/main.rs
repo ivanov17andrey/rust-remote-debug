@@ -5,11 +5,12 @@ fn main() {
 
     loop {
         println!("{}", a);
-        if nums.len() < 10 {
-            nums.push(a);
-        } else {
+        if nums.len() >= 10 {
             nums = nums[1..].to_vec();
         }
+
+        nums.push(a);
+
         println!("{:?}", nums);
 
         a += 1;
